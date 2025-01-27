@@ -4,6 +4,9 @@ local opt = vim.opt
 -- Set <leader> to space
 vim.g.mapleader = " "
 
+-- Set .prisma files highlight
+vim.cmd([[autocmd FileType prisma TSBufEnable highlight]])
+
 -- Add some tabs and spaces configurations
 opt.shiftwidth = 2
 opt.smartindent = true
