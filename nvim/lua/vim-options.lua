@@ -19,25 +19,23 @@ opt.sidescrolloff = 2
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- Set the maximum itens in completion box
-opt.pumheight = 3
+opt.pumheight = 5
 
 -- Quality life change's
 opt.laststatus = 3
 opt.clipboard = "unnamedplus"
 opt.termguicolors = true
-opt.fillchars:append { eob = " " }
-opt.shortmess:append "aIF"
+opt.fillchars:append({ eob = " " })
+opt.shortmess:append("aIF")
 opt.cursorline = true
 opt.cursorlineopt = "number"
 opt.ruler = true
 opt.number = true
-opt.breakindent = true
-opt.linebreak = true
 opt.swapfile = false
 opt.undofile = true
 opt.cmdheight = 0
 
-vim.diagnostic.config {
+vim.diagnostic.config({
   virtual_text = {
     prefix = "",
     suffix = "",
@@ -56,4 +54,4 @@ vim.diagnostic.config {
       [vim.diagnostic.severity.WARN] = "",
     },
   },
-}
+})
