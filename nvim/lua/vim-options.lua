@@ -1,3 +1,12 @@
+-- Formater on save
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*",
+  callback = function(args)
+    require("conform").format({ bufnr = args.buf })
+  end,
+})
+
+
 -- Variables
 local opt = vim.opt
 
@@ -25,17 +34,19 @@ opt.pumheight = 5
 opt.laststatus = 3
 opt.clipboard = "unnamedplus"
 opt.termguicolors = true
-opt.fillchars:append({ eob = " " })
-opt.shortmess:append("aIF")
+opt.fillchars:append { eob = " " }
+opt.shortmess:append "aIF"
 opt.cursorline = true
 opt.cursorlineopt = "number"
 opt.ruler = true
 opt.number = true
+opt.breakindent = true
+opt.linebreak = true
 opt.swapfile = false
 opt.undofile = true
 opt.cmdheight = 0
 
-vim.diagnostic.config({
+vim.diagnostic.config {
   virtual_text = {
     prefix = "",
     suffix = "",
@@ -54,4 +65,4 @@ vim.diagnostic.config({
       [vim.diagnostic.severity.WARN] = "",
     },
   },
-})
+}

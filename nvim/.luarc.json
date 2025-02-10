@@ -1,7 +1,5 @@
 {
     "diagnostics.globals": [
-        "vim",
-        "on_attach",
-        "capabilities"
+        "vim"
     ]
 }
