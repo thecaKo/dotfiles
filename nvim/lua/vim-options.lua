@@ -66,3 +66,7 @@ vim.diagnostic.config {
     },
   },
 }
+
+-- Atalho para abrir/fechar o Neo-tree
+vim.api.nvim_set_keymap("n", "<leader>e", ":Neotree toggle<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-h>", "<C-w>h", { noremap = true, silent = true })
